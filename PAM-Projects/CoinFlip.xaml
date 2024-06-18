@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PAM_Projects.CoinFlip"
+             Title="CoinFlip">
+    <VerticalStackLayout>
+        <Label
+        Text="Minha resolução (sem MVVM)"/>
+        <Label 
+        Text="Faça sua aposta e gire a moeda!"
+        FontSize="50"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+
+        <Image
+        Source="cara.png"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        x:Name="CoinImage"
+        MinimumWidthRequest="100"
+        MaximumWidthRequest="100"/>
+
+        <Label
+        x:Name="CoinResultLabel"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+    />
+
+        <Picker 
+        x:Name="CoinPicker"
+        Title="Escolha cara ou coroa"
+        >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>cara</x:String>
+                    <x:String>coroa</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+        x:Name="CoinButton"
+        Clicked="CoinButton_Clicked"
+        Text="Clique aqui para girar a moeda!"
+        />
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PAM_Projects.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PAM_Projects"
+    xmlns:view="clr-namespace:PAM_Projects.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="PAM_Projects"
+>
+
+    <TabBar>
+        <Tab>
+            <ShellContent
+                Title="DiceRoller"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage"
+                Icon="cara.png">
+                
+            </ShellContent>
+        </Tab>
+        <Tab>
+            <ShellContent
+                Title="CoinFlip"
+                ContentTemplate="{DataTemplate local:CoinFlip}"
+                Route="CoinFlip"
+                Icon="white.png">
+                
+            </ShellContent>
+        </Tab>
+        <Tab>
+            <ShellContent
+                Title="DiceRoller-Professor"
+                ContentTemplate="{DataTemplate view:CoinView}"
+                Route="CoinView"
+                Icon="white.png">
+                
+            </ShellContent>
+        </Tab>
+    </TabBar>
+</Shell>

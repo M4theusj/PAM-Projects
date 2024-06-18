@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PAM_Projects.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+    Padding="30,0"
+    Spacing="25"
+    >
+            <Label
+        Text="ROLADOR DE DADOS"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        FontSize="50"
+        FontAttributes="Bold"
+        TextColor="Black"
+        x:Name="InitialLabel"
+        />
+
+            <Label
+        x:Name="DiceResult"
+        Text="6"
+        HorizontalOptions="Center"
+        FontSize="70"
+        FontAttributes="Bold"
+        TextColor="Black"
+        />
+
+            <Picker x:Name="DicePicker"
+            Title="Quantidade de Lados"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            FontSize="20"
+            BackgroundColor="#323232"
+            TextColor="White"
+            TitleColor="Black"
+            >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+        x:Name="DiceRollButton"
+        Text="ROLAR O DADO"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Clicked="DiceRollButton_Clicked"
+        BackgroundColor="#323232"
+        TextColor="White"
+        />
+
+            <ImageButton
+        Source="moon.png"
+        x:Name="ChangeThemeColor"
+        Clicked="ChangeThemeColor_Clicked"
+        MinimumWidthRequest="50"
+        MaximumWidthRequest="50"
+        />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
