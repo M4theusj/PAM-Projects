@@ -13,7 +13,7 @@ namespace PAM_Projects.ViewModels
         private string imagem;
 
         [ObservableProperty]
-        private string escolha;
+        private string escolha = "cara";
 
         public ICommand JogarCommand { get; }
 
